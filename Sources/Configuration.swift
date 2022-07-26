@@ -95,6 +95,8 @@ public struct DayStyleConfiguration {
 
     public var selectorColor: UIColor?
     public var backgroundColor: UIColor?
+    
+    public var locale:Locale?
 
 
     // MARK: - Initializer
@@ -117,6 +119,8 @@ public struct DayStyleConfiguration {
         newStyle.selectorColor = style.selectorColor ?? selectorColor
         newStyle.backgroundColor = style.backgroundColor ?? backgroundColor
 
+        newStyle.locale = style.locale
+        
         return newStyle
     }
 

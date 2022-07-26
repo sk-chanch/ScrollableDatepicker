@@ -6,7 +6,7 @@
 import UIKit
 
 
-public protocol ScrollableDatepickerDelegate: class {
+public protocol ScrollableDatepickerDelegate: AnyObject {
     func datepicker(_ datepicker: ScrollableDatepicker, didSelectDate date: Date)
 }
 

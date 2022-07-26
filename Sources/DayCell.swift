@@ -5,7 +5,6 @@
 
 import UIKit
 
-
 open class DayCell: UICollectionViewCell {
 
     @IBOutlet public weak var dateLabel: UILabel!
@@ -22,7 +21,8 @@ open class DayCell: UICollectionViewCell {
 
     func setup(date: Date, style: DayStyleConfiguration) {
         let formatter = DateFormatter()
-
+        formatter.locale = style.locale
+        
         formatter.dateFormat = "dd"
         dateLabel.text = formatter.string(from: date)
         dateLabel.font = style.dateTextFont ?? dateLabel.font
